@@ -1,0 +1,171 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Arial';
+}
+
+html, body{
+	height: 100%;
+}
+
+.wrapper{
+	height: 100%;          
+	display: flex;
+	flex-direction: column;
+}
+
+.header{
+	background: purple;
+	color: #FFF;
+	height: 70px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+.footer{
+	background: red;
+	color: #FFF;
+	height: 70px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+.main{
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: center;
+	padding: 20px;
+}
+
+.container{
+	max-width: 1200px; /*a*/
+	display: flex;
+	flex-direction: column;
+}
+
+/*************************************/
+
+.three-blocks{
+	max-width: 100%; /*a*/
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.three-blocks-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	position: relative;
+}
+
+.three-blocks-row > div{
+	border: 5px solid black;
+	margin: 10px;
+	background: purple;
+	color:  #FFF;
+	padding: 20px;		
+}
+
+.three-blocks-img{
+	max-width: 100%;  
+	background: orange;  
+	height: 200px;  
+	margin-bottom: 20px;  
+    
+    flex: 0 0 33.33%;
+    min-height: 250px;
+    position: relative;	
+}
+.three-blocks-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.three-blocks-col {
+	flex: 0 0 33.33%;
+	min-height: 250px;
+	position: relative;
+}
+
+.two-blocks{
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.two-blocks-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.two-blocks-row > div{
+	border: 5px solid black;
+	margin: 10px;
+	background: purple;
+	color:  #FFF;
+	padding: 20px;
+}
+
+.two-blocks-img{
+	max-width: 100%; /*a*/ 
+	height: 290px;
+	background: orange;
+	margin-bottom: 20px;
+	
+	 flex: 0 0 33.33%;
+    min-height: 250px;
+    position: relative;	
+}
+.two-blocks-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 1200px){
+	.container{
+		max-width: 920px;
+	}
+}
+
+@media (max-width: 992px){
+	.container{
+		max-width: 720px;
+	}
+}
+
+@media (max-width: 720px){
+	.three-blocks-row{
+		flex-direction: column;
+	}
+	.two-blocks-row{
+		flex-direction: column;
+	}
+	.footer{
+		font-size: 30px;
+		padding-top: 0;
+	}
+	.header{
+		font-size: 30px;
+		padding-top: 0;
+	}
+}
+
+
+/*--------------------------------------*/
+@media all;
+@media print; 
+@media screen;
+@media speech;
+
+@media(orientation: portrait/landscape);
+@media(monochrome);
+@media(min-width/min-heigth/max-width/max-heigth);
